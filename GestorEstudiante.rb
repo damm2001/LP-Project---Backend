@@ -28,7 +28,7 @@ end
 
 gestor = GestorEstudiante.new([])
 
-
+#Meiyin Chang
 get '/api/users' do
     content_type :json
     gestor.read_data_from_csv
@@ -49,4 +49,26 @@ post '/api/users' do
     request_body.to_json
 end
 
+#Diego Martinez
+put '/api/users/:nombre' do
+  nombreUser = params['nombre']
+  request_body = JSON.parse(request.body.read)
+  gestor.read_data_from_csv
+  gestor.estudiantes.each_with_index do |userName, index|
+      if userName['nombre'] == nombreUser
+        gestor.estudiantes[index] = request_body
+      end
+  end
+  gestor.write_data_to_csv()
+  status 204
+  {"UPDATED" => nombreUser}.to_json
+end
 
+
+delete '/api/users/:nombre' do
+  nombreUser = params['nombre']
+  gestor.read_data_from_csv
+  gestor.estudiantes.reject! { |user| user['nombre'] == nombreUser }
+  gestor.write_data_to_csv
+  status 204
+end
