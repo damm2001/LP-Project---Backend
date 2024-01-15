@@ -9,14 +9,14 @@ class GestorLibros
     def initialize(data)
       @libros = data
     end
-  
-    def write_data_to_csv()      
+
+    def write_data_to_csv()
       CSV.open(ARCHIVO, 'w') do |csv|
           csv << ["titulo", "autor", "edicion", "disponibilidad"]
           libros.each {|row| csv << row.values}
         end
     end
-  
+
     def read_data_from_csv
       data = []
       CSV.foreach(ARCHIVO, headers: true) do |row|
@@ -27,14 +27,15 @@ class GestorLibros
 end
 # Habilitar CORS para todas las libros
 
+#Irving Macías
 gestor = GestorLibros.new([])
-  
+
   get '/api/libros' do
     content_type :json
     gestor.read_data_from_csv
     gestor.libros.to_json
 end
-  
+
 post '/api/libros' do
     request_body = JSON.parse(request.body.read)
     gestor.read_data_from_csv
@@ -44,3 +45,30 @@ post '/api/libros' do
     request_body.to_json
 end
 
+#Diego Martinez
+put '/api/libros/:titulo' do
+  nombreRuta = params['titulo']
+  request_body = JSON.parse(request.body.read)
+  gestor.read_data_from_csv
+  gestor.libros.each_with_index do |ruta, index|
+    if ruta['titulo'] == nombreRuta
+      gestor.libros[index] = request_body
+    end
+  end
+  gestor.write_data_to_csv()
+  status 200
+  {"UPDATED" => nombreRuta}.to_json
+end
+
+delete '/api/libros/:titulo' do
+    nombreRuta = params['titulo']
+    gestor.read_data_from_csv
+    gestor.libros.each_with_index do |ruta, index|
+      if ruta['titulo'] == nombreRuta
+        gestor.libros.delete_at(index)
+      end
+    end
+    gestor.write_data_to_csv()
+    status 200
+    {"DELETED" => nombreRuta}.to_json
+end
