@@ -72,3 +72,22 @@ delete '/api/libros/:titulo' do
     status 200
     {"DELETED" => nombreRuta}.to_json
 end
+
+#Meiyin Chang
+# Ruta para buscar libros por título
+get '/api/libros/buscar/titulo/:titulo' do
+  titulo = params['titulo']
+  gestor.read_data_from_csv
+  resultados = gestor.libros.select { |libro| libro['titulo'].include?(titulo) }
+  resultados.to_json
+end
+
+
+#Irving Macías
+# Ruta para buscar libros por autor
+get '/api/libros/buscar/autor/:autor' do
+  autor = params['autor']
+  gestor.read_data_from_csv
+  resultados = gestor.libros.select { |libro| libro['autor'].include?(autor) }
+  resultados.to_json
+end
