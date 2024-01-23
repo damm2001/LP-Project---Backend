@@ -1,6 +1,7 @@
 require 'sinatra'
 require './GestorEstudiante'
 require './GestorLibros'
+require './GestorEstudianteLibros'
 require 'rack/cors'
 
 use Rack::Cors do
@@ -11,6 +12,8 @@ use Rack::Cors do
 end
 gestor_estudiantes = GestorEstudiante.new([])
 gestor_libros = GestorLibros.new([])
+gestor_EstudianteLibros = GestorEstudianteLibros.new([])
+
 
 =begin
 
@@ -44,8 +47,14 @@ get '/api/books' do
   gestor_libros.libros.to_json
 end
 
-get '/' do
+get '/api/students' do
   content_type :json
   gestor_estudiantes.read_data_from_csv
   gestor_estudiantes.estudiantes.to_json
+end
+
+get '/api/studentsbooks' do
+  content_type :json
+  gestor_EstudianteLibros.read_data_from_csv
+  gestor_EstudianteLibros.estudianteLibros.to_json
 end

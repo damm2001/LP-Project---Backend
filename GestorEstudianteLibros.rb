@@ -5,7 +5,7 @@ require 'json'
 ARCHIVO_estudianteS_RUTA = 'estudianteLibros.csv'
 
 class GestorEstudianteLibros
-  attr_accessor : estudianteLibros
+  attr_accessor :estudianteLibros
 
     def initialize(data)
         @estudianteLibros = data
@@ -25,14 +25,14 @@ class GestorEstudianteLibros
     end
 end
 
-gestor = GestorestudianteLibros.new([])
+gestor = GestorEstudianteLibros.new([])
 
 get '/api/estudiantes_libros' do
     content_type :json
     gestor.read_data_from_csv
     gestor.estudianteLibros.to_json
 end
-  
+
 post '/api/estudiantes_libros' do
     request_body = JSON.parse(request.body.read)
     gestor.read_data_from_csv
