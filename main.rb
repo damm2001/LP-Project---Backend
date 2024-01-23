@@ -1,7 +1,14 @@
 require 'sinatra'
 require './GestorEstudiante'
 require './GestorLibros'
+require 'rack/cors'
 
+use Rack::Cors do
+  allow do
+    origins '*'  # Cambia esto con el origen de tu aplicación Angular
+    resource '/api/*', headers: :any, methods: [:get, :post, :put, :delete, :options]
+  end
+end
 gestor_estudiantes = GestorEstudiante.new([])
 gestor_libros = GestorLibros.new([])
 
@@ -14,6 +21,7 @@ get '/' do
 end
 
 
+=begin
 
 #Irving Macias
 get '/api/books' do
@@ -26,3 +34,10 @@ get '/api/books' do
 
     "<h1>Lista de Libros:</h1><ul>#{libros.join}</ul>"
   end
+=end
+
+get '/api/books' do
+  content_type :json
+  gestor_libros.read_data_from_csv
+  gestor_libros.libros.to_json
+end
