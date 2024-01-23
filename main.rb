@@ -12,6 +12,8 @@ end
 gestor_estudiantes = GestorEstudiante.new([])
 gestor_libros = GestorLibros.new([])
 
+=begin
+
 #Meiyin Chang
 get '/' do
     content_type :html
@@ -21,7 +23,7 @@ get '/' do
 end
 
 
-=begin
+
 
 #Irving Macias
 get '/api/books' do
@@ -40,4 +42,10 @@ get '/api/books' do
   content_type :json
   gestor_libros.read_data_from_csv
   gestor_libros.libros.to_json
+end
+
+get '/' do
+  content_type :json
+  gestor_estudiantes.read_data_from_csv
+  gestor_estudiantes.estudiantes.to_json
 end
