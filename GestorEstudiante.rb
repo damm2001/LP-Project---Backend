@@ -29,13 +29,13 @@ end
 gestor = GestorEstudiante.new([])
 
 #Meiyin Chang
-get '/api/users' do
+get '/api/students' do
     content_type :json
     gestor.read_data_from_csv
     gestor.estudiantes.to_json
 end
 
-post '/api/users' do
+post '/api/students' do
     request_body = JSON.parse(request.body.read)
     gestor.read_data_from_csv
     gestor.estudiantes.each_with_index do |usuario, index|
@@ -50,7 +50,7 @@ post '/api/users' do
 end
 
 #Diego Martinez
-put '/api/users/:nombre' do
+put '/api/students/:nombre' do
   nombreUser = params['nombre']
   request_body = JSON.parse(request.body.read)
   gestor.read_data_from_csv
@@ -65,7 +65,7 @@ put '/api/users/:nombre' do
 end
 
 
-delete '/api/users/:nombre' do
+delete '/api/students/:nombre' do
   nombreUser = params['nombre']
   gestor.read_data_from_csv
   gestor.estudiantes.reject! { |user| user['nombre'] == nombreUser }
