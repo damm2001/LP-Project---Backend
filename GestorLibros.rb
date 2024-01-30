@@ -30,13 +30,13 @@ end
 #Irving Macías
 gestor = GestorLibros.new([])
 
-  get '/api/libros' do
+  get '/api/books' do
     content_type :json
     gestor.read_data_from_csv
     gestor.libros.to_json
 end
 
-post '/api/libros' do
+post '/api/books' do
     request_body = JSON.parse(request.body.read)
     gestor.read_data_from_csv
     gestor.libros << request_body
@@ -46,7 +46,7 @@ post '/api/libros' do
 end
 
 #Diego Martinez
-put '/api/libros/:titulo' do
+put '/api/books/:titulo' do
   nombreRuta = params['titulo']
   request_body = JSON.parse(request.body.read)
   gestor.read_data_from_csv
@@ -60,7 +60,7 @@ put '/api/libros/:titulo' do
   {"UPDATED" => nombreRuta}.to_json
 end
 
-delete '/api/libros/:titulo' do
+delete '/api/books/:titulo' do
     nombreRuta = params['titulo']
     gestor.read_data_from_csv
     gestor.libros.each_with_index do |ruta, index|
@@ -75,7 +75,7 @@ end
 
 #Meiyin Chang
 # Ruta para buscar libros por título
-get '/api/libros/buscar/titulo/:titulo' do
+get '/api/books/buscar/titulo/:titulo' do
   titulo = params['titulo']
   gestor.read_data_from_csv
   resultados = gestor.libros.select { |libro| libro['titulo'].include?(titulo) }
@@ -85,7 +85,7 @@ end
 
 #Irving Macías
 # Ruta para buscar libros por autor
-get '/api/libros/buscar/autor/:autor' do
+get '/api/books/buscar/autor/:autor' do
   autor = params['autor']
   gestor.read_data_from_csv
   resultados = gestor.libros.select { |libro| libro['autor'].include?(autor) }
