@@ -1,43 +1,43 @@
-titulo,autor,edicion,disponibilidad
-El Jardín de las Delicias,Javier Pérez,1,false
-Cien Años de Soledad,Gabriel García Márquez,5,false
-La Sombra del Viento,Carlos Ruiz Zafón,3,false
-1984,George Orwell,2,true
-Harry Potter y la Piedra Filosofal,J.K. Rowling,4,false
-Don Quijote de la Mancha,Miguel de Cervantes,6,true
-Orgullo y Prejuicio,Jane Austen,1,true
-El Código Da Vinci,Dan Brown,5,false
-Matar un Ruiseñor,Harper Lee,3,true
-Rayuela,Julio Cortázar,2,true
-Juegos del hambre,Rowling,3,true
-El Principito,Antoine de Saint-Exupéry,1,true
-El Alquimista,Paulo Coelho,2,true
-El Hobbit,J.R.R. Tolkien,3,false
-El Perfume,Patrick Süskind,4,true
-El Nombre del Viento,Patrick Rothfuss,5,true
-El Señor de los Anillos,J.R.R. Tolkien,6,true
-El Retrato de Dorian Gray,Oscar Wilde,1,true
-El Cuento de la Criada,Margaret Atwood,2,true
-El Código Da Vinci,Dan Brown,3,true
-El Silmarillion,J.R.R. Tolkien,4,true
-El Código Da Vinci,Dan Brown,5,true
-Crónica de una Muerte Anunciada,Gabriel García Márquez,2,true
-La Metamorfosis,Franz Kafka,1,false
-Fahrenheit 451,Ray Bradbury,4,true
-Pedro Páramo,Juan Rulfo,3,true
-Alicia en el País de las Maravillas,Lewis Carroll,2,true
-Los Juegos del Hambre,Suzanne Collins,4,false
-La Odisea,Homero,2,true
-Los Pilares de la Tierra,Ken Follett,3,true
-Drácula,Bram Stoker,1,true
-La Iliada,Homero,5,true
-Los Miserables,Victor Hugo,2,true
-Mujer en Punto Cero,Nawal El Saadawi,1,false
-Crimen y Castigo,Fiodor Dostoievski,3,true
-Sapiens: De Animales a Dioses,Yuval Noah Harari,2,true
-La Divina Comedia,Dante Alighieri,1,true
-El Gran Gatsby,F. Scott Fitzgerald,4,true
-La Ciudad y los Perros,Mario Vargas Llosa,2,false
-Sobre Héroes y Tumbas,Ernesto Sabato,3,true
-Memorias de una Geisha,Arthur Golden,1,true
-La Hija del Apicultor,Paullina Simons,2,true
+titulo,autor,edicion,disponibilidad,valoracion
+El Jardín de las Delicias,Javier Pérez,1,false,4
+Cien Años de Soledad,Gabriel García Márquez,5,false,5
+La Sombra del Viento,Carlos Ruiz Zafón,3,false,3
+1984,George Orwell,2,true,5
+Harry Potter y la Piedra Filosofal,J.K. Rowling,4,false,4
+Don Quijote de la Mancha,Miguel de Cervantes,6,true,5
+Orgullo y Prejuicio,Jane Austen,1,true,3
+El Código Da Vinci,Dan Brown,5,false,4
+Matar un Ruiseñor,Harper Lee,3,true,5
+Rayuela,Julio Cortázar,2,true,4
+Juegos del hambre,Rowling,3,true,3
+El Principito,Antoine de Saint-Exupéry,1,true,5
+El Alquimista,Paulo Coelho,2,true,4
+El Hobbit,J.R.R. Tolkien,3,false,5
+El Perfume,Patrick Süskind,4,true,3
+El Nombre del Viento,Patrick Rothfuss,5,true,4
+El Señor de los Anillos,J.R.R. Tolkien,6,true,5
+El Retrato de Dorian Gray,Oscar Wilde,1,true,4
+El Cuento de la Criada,Margaret Atwood,2,true,3
+El Código Da Vinci,Dan Brown,3,true,4
+El Silmarillion,J.R.R. Tolkien,4,true,5
+El Código Da Vinci,Dan Brown,5,true,4
+Crónica de una Muerte Anunciada,Gabriel García Márquez,2,true,3
+La Metamorfosis,Franz Kafka,1,false,4
+Fahrenheit 451,Ray Bradbury,4,true,5
+Pedro Páramo,Juan Rulfo,3,true,4
+Alicia en el País de las Maravillas,Lewis Carroll,2,true,3
+Los Juegos del Hambre,Suzanne Collins,4,false,4
+La Odisea,Homero,2,true,5
+Los Pilares de la Tierra,Ken Follett,3,true,4
+Drácula,Bram Stoker,1,true,3
+La Iliada,Homero,5,true,4
+Los Miserables,Victor Hugo,2,true,5
+Mujer en Punto Cero,Nawal El Saadawi,1,false,4
+Crimen y Castigo,Fiodor Dostoievski,3,true,5
+Sapiens: De Animales a Dioses,Yuval Noah Harari,2,true,4
+La Divina Comedia,Dante Alighieri,1,true,5
+El Gran Gatsby,F. Scott Fitzgerald,4,true,4
+La Ciudad y los Perros,Mario Vargas Llosa,2,false,3
+Sobre Héroes y Tumbas,Ernesto Sabato,3,true,4
+Memorias de una Geisha,Arthur Golden,1,true,5
+La Hija del Apicultor,Paullina Simons,2,true,4
