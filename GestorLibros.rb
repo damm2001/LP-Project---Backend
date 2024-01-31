@@ -101,3 +101,10 @@ get '/api/books/buscar' do
   end
   resultados.to_json
 end
+
+# Ruta para buscar libros con disponibilidad true
+get '/api/books/disponibilidad/true' do
+  gestor.read_data_from_csv
+  resultados = gestor.libros.select { |libro| libro['disponibilidad'] == "true" }
+  resultados.to_json
+end
