@@ -91,3 +91,13 @@ get '/api/books/buscar/autor/:autor' do
   resultados = gestor.libros.select { |libro| libro['autor'].include?(autor) }
   resultados.to_json
 end
+
+# Ruta para buscar libros por título o autor
+get '/api/books/buscar' do
+  termino = params['termino'].downcase
+  gestor.read_data_from_csv
+  resultados = gestor.libros.select do |libro|
+    libro['titulo'].downcase.include?(termino) || libro['autor'].downcase.include?(termino)
+  end
+  resultados.to_json
+end
