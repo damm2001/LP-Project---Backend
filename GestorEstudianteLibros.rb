@@ -27,13 +27,13 @@ end
 
 gestor = GestorEstudianteLibros.new([])
 
-get '/api/estudiantes_libros' do
+get '/api/studentsbooks' do
     content_type :json
     gestor.read_data_from_csv
     gestor.estudianteLibros.to_json
 end
 
-post '/api/estudiantes_libros' do
+post '/api/studentsbooks' do
     request_body = JSON.parse(request.body.read)
     gestor.read_data_from_csv
     gestor.estudianteLibros.each_with_index do |userRoutePair, index|
@@ -47,7 +47,7 @@ post '/api/estudiantes_libros' do
     request_body.to_json
 end
 
-delete '/api/estudiantes_libros/:estudiante/:libro' do
+delete '/api/studentsbooks/:estudiante/:libro' do
     nombreLibro = params['libro']
     nombreEstudiante = params['estudiante']
     gestor.read_data_from_csv()
