@@ -1,12 +1,12 @@
 titulo,autor,edicion,disponibilidad,valoracion
-El Jardín de las Delicias,Javier Pérez,1,false,4
+El Jardin de las Delicias,Javier Pérez,1,false,2
 Cien Años de Soledad,Gabriel García Márquez,5,false,5
 La Sombra del Viento,Carlos Ruiz Zafón,3,false,3
-1984,George Orwell,2,true,5
+1984,George Orwell,2,true,3
 Harry Potter y la Piedra Filosofal,J.K. Rowling,4,false,4
-Don Quijote de la Mancha,Miguel de Cervantes,6,true,5
+Don Quijote de la Mancha,Miguel de Cervantes,6,true,3
 Orgullo y Prejuicio,Jane Austen,1,true,3
-El Código Da Vinci,Dan Brown,5,false,4
+El Codigo Da Vinci,Dan Brown,5,false,2
 Matar un Ruiseñor,Harper Lee,3,true,5
 Rayuela,Julio Cortázar,2,true,4
 Juegos del hambre,Rowling,3,true,3
@@ -18,18 +18,17 @@ El Nombre del Viento,Patrick Rothfuss,5,true,4
 El Señor de los Anillos,J.R.R. Tolkien,6,true,5
 El Retrato de Dorian Gray,Oscar Wilde,1,true,4
 El Cuento de la Criada,Margaret Atwood,2,true,3
-El Código Da Vinci,Dan Brown,3,true,4
+El Codigo Da Vinci,Dan Brown,5,false,2
 El Silmarillion,J.R.R. Tolkien,4,true,5
-El Código Da Vinci,Dan Brown,5,true,4
-Crónica de una Muerte Anunciada,Gabriel García Márquez,2,true,3
+Cronica de una Muerte Anunciada,Gabriel García Márquez,2,true,3
 La Metamorfosis,Franz Kafka,1,false,4
 Fahrenheit 451,Ray Bradbury,4,true,5
 Pedro Páramo,Juan Rulfo,3,true,4
-Alicia en el País de las Maravillas,Lewis Carroll,2,true,3
+Alicia en el Pais de las Maravillas,Lewis Carroll,2,true,3
 Los Juegos del Hambre,Suzanne Collins,4,false,4
 La Odisea,Homero,2,true,5
 Los Pilares de la Tierra,Ken Follett,3,true,4
-Drácula,Bram Stoker,1,true,3
+Dracula,Bram Stoker,1,true,3
 La Iliada,Homero,5,true,4
 Los Miserables,Victor Hugo,2,true,5
 Mujer en Punto Cero,Nawal El Saadawi,1,false,4
@@ -38,6 +37,6 @@ Sapiens: De Animales a Dioses,Yuval Noah Harari,2,true,4
 La Divina Comedia,Dante Alighieri,1,true,5
 El Gran Gatsby,F. Scott Fitzgerald,4,true,4
 La Ciudad y los Perros,Mario Vargas Llosa,2,false,3
-Sobre Héroes y Tumbas,Ernesto Sabato,3,true,4
+Sobre Heroes y Tumbas,Ernesto Sabato,3,true,4
 Memorias de una Geisha,Arthur Golden,1,true,5
 La Hija del Apicultor,Paullina Simons,2,true,4

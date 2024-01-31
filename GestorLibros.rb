@@ -12,7 +12,7 @@ class GestorLibros
 
     def write_data_to_csv()
       CSV.open(ARCHIVO, 'w') do |csv|
-          csv << ["titulo", "autor", "edicion", "disponibilidad"]
+          csv << ["titulo", "autor", "edicion", "disponibilidad","valoracion"]
           libros.each {|row| csv << row.values}
         end
     end
